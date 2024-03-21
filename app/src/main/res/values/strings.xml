@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Jetpack Compose Comprehensive Bootcamp</string>
     <string name="title_activity_biz_card">BizCardActivity</string>
+    <string name="title_activity_compose_fundamentals">ComposeFundamentalsActivity</string>
 </resources>

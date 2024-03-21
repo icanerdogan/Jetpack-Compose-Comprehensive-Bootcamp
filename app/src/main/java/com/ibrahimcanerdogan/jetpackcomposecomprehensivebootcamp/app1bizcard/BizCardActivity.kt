@@ -114,7 +114,6 @@ fun CreateBizCard() {
     }
 }
 
-@Preview(showBackground = true)
 @Composable
 fun PortfolioContent(isShown: Boolean = false) {
     if (isShown) {
@@ -219,7 +218,7 @@ private fun CreateImageProfile(modifier: Modifier = Modifier) {
     }
 }
 
-//@Preview(showBackground = true)
+@Preview(showBackground = true)
 @Composable
 fun BizCardPreview() {
     JetpackComposeComprehensiveBootcampTheme {
