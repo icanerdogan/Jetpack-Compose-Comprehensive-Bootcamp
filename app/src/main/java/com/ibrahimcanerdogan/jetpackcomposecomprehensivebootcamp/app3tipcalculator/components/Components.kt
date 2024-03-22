@@ -27,7 +27,7 @@ fun InputField(
     enabled: Boolean,
     isSingleLine: Boolean,
     keyboardType: KeyboardType = KeyboardType.Number,
-    imeAction: ImeAction = ImeAction.Next,
+    imeAction: ImeAction = ImeAction.Done,
     onAction: KeyboardActions = KeyboardActions.Default
 ) {
     OutlinedTextField(
