@@ -3,4 +3,5 @@
     <string name="title_activity_biz_card">BizCardActivity</string>
     <string name="title_activity_compose_fundamentals">ComposeFundamentalsActivity</string>
     <string name="title_activity_tip_calculator">TipCalculatorActivity</string>
+    <string name="title_activity_movie_app">MovieAppActivity</string>
 </resources>

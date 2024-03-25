@@ -67,4 +67,10 @@ dependencies {
     // For All Icon Access
     // https://stackoverflow.com/questions/65665563/android-jetpack-compose-icons-doesnt-contain-some-of-the-material-icons
     implementation libs.androidx.material.icons.extended
+
+    // Navigation
+    implementation libs.androidx.navigation.compose
+
+    //Coil
+    implementation libs.coil.compose
 }
