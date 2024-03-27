@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id 'androidx.room'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -32,6 +35,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    room {
+        schemaDirectory "$projectDir/schemas"
     }
     buildFeatures {
         compose true
@@ -73,4 +79,23 @@ dependencies {
 
     //Coil
     implementation libs.coil.compose
+
+    // Room
+    implementation libs.androidx.room.runtime
+    annotationProcessor libs.androidx.room.room.compiler
+    // To use Kotlin annotation processing tool (kapt) MUST HAVE!
+    kapt(libs.androidx.room.room.compiler)
+    implementation libs.androidx.room.ktx
+
+    // Coroutines
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
+    implementation libs.kotlinx.coroutines.play.services
+
+    // Dependency Injection
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
+
+
+    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0")
 }
