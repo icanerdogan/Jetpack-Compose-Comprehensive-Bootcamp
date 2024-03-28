@@ -5,4 +5,5 @@
     <string name="title_activity_tip_calculator">TipCalculatorActivity</string>
     <string name="title_activity_movie_app">MovieAppActivity</string>
     <string name="title_activity_note_app">NoteAppActivity</string>
+    <string name="title_activity_jet_trivia_app">JetTriviaAppActivity</string>
 </resources>
