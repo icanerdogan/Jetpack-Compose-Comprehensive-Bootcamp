@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".app6jettrivia.JetTriviaApplication"
+        android:name=".app7weather.WeatherApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,7 +16,7 @@
         android:theme="@style/Theme.JetpackComposeComprehensiveBootcamp"
         tools:targetApi="31">
         <activity
-            android:name=".app6jettrivia.JetTriviaAppActivity"
+            android:name=".app7weather.JetWeatherAppActivity"
             android:exported="true"
             android:label="@string/title_activity_jet_trivia_app"
             android:theme="@style/Theme.JetpackComposeComprehensiveBootcamp" >
@@ -26,6 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".app6jettrivia.JetTriviaAppActivity"
+            android:exported="false"
+            android:label="@string/title_activity_jet_trivia_app"
+            android:theme="@style/Theme.JetpackComposeComprehensiveBootcamp" />
         <activity
             android:name=".app5note.view.NoteAppActivity"
             android:exported="true"

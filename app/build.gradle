@@ -7,6 +7,10 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
+def localPropertiesFile = rootProject.file("local.properties")
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(localPropertiesFile))
+
 android {
     namespace 'com.ibrahimcanerdogan.jetpackcomposecomprehensivebootcamp'
     compileSdk 34
@@ -22,6 +26,8 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+
+        buildConfigField "String", "WEATHER_API_KEY", localProperties['WEATHER_API_KEY']
     }
 
     buildTypes {
@@ -42,6 +48,7 @@ android {
     }
     buildFeatures {
         compose true
+        buildConfig true // FOR SECRET API BuildConfig
     }
     composeOptions {
         kotlinCompilerExtensionVersion '1.5.1'
@@ -114,6 +121,9 @@ dependencies {
     kapt libs.hilt.android.compiler
     kapt libs.androidx.hilt.compiler
     implementation libs.androidx.hilt.work
+
+    // Shapes
+    implementation libs.androidx.graphics.shapes
 
     // WorkManager
     implementation libs.androidx.work.runtime.ktx
